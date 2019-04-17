@@ -66,18 +66,18 @@ Esto produce una advertencia del compilador en el que sugiere si en la llamada a
   
     gcc -E  hello4.c -o hello4.i
     gcc -S hello4.i -o hello4.s  
-Ya no mostró advertencias o errores.
+Ya no mostró errores, pero sigue la advertencia del prontf.
   
 8- El archivo hello4.s contiene el programa codificado en lenguaje assembler.  
   
 9- Comando:  
   
-    gcc -C hello4.s -o hello4.o    
+    gcc -c hello4.s -o hello4.o    
 
 10-Comando:  
   
     gcc hello4.o -o hello4.exe  
-No pudo realizar la vinculación, rompió.  
+No pudo realizar la vinculación, porque nos dice que hay una referencia indefinida a prontf 
   
 11-Comando:  
   
@@ -111,8 +111,6 @@ Resultado:
   
 15- Funciona porque la llamada a printf en el código cuenta como una declaración implícita. Y además al estar printf en la librería estándar no hay problema para vincularla luego.  
   
-### Aclaraciones  
 
-Al ir paso a paso, al intentar realizar la vinculacion y generar el .exe al partir del .o falla. Sin embargo, al hacer el proceso completo todo de una a partir del archivo fuente .c funciona. Y si se ejecuta el comando gcc -save-temps hello4.c; y luego se intenta vincular el archivo .o que generó este comando, ahí si funciona.
 
 
