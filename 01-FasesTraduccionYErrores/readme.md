@@ -7,7 +7,7 @@ Nombre: Juan Ignacio
   
 ####  Consignas  
   
-1. Escribir hello2.c, que es una variante del hello.c:
+1. Escribir hello2.c, que es una  variante del hello.c:
     ``` [C]
     #include <stdio.h>
 
